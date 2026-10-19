@@ -2,324 +2,578 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"
-      integrity="sha512-DHNepbIus9t4e6YoMBSJLwl+nnm0tIwMBonsQQ+W9NKN6gVVVbomJs9Ii3mQ+HzGZiU5FyJLdnAz9a63ZgZvTQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    <meta name="theme-color" content="#0c1626" />
+    <meta
+      name="description"
+      content="Henry: servicio técnico especializado en reparación de laptops, celulares y electrodomésticos. Diagnóstico gratuito, repuestos originales y garantía por escrito."
     />
-    <link rel="stylesheet" href="estilo.css" />
-    <title>Servicio Técnico</title>
+    <meta name="author" content="Henry" />
+    <link rel="canonical" href="https://jordanroberto74.github.io/henry-tecnico/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Henry — Servicio Técnico Especializado" />
+    <meta property="og:title" content="Henry — Servicio Técnico Especializado" />
+    <meta
+      property="og:description"
+      content="Reparación de laptops, celulares y electrodomésticos con diagnóstico gratuito, repuestos originales y garantía por escrito."
+    />
+    <meta property="og:url" content="https://jordanroberto74.github.io/henry-tecnico/" />
+    <meta property="og:image" content="https://jordanroberto74.github.io/henry-tecnico/img/trabajo1.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Henry — Servicio Técnico Especializado" />
+    <meta
+      name="twitter:description"
+      content="Reparación de laptops, celulares y electrodomésticos con diagnóstico gratuito y garantía."
+    />
+
+    <title>Henry — Servicio Técnico Especializado</title>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="image" href="img/trabajo1.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Henry — Servicio Técnico Especializado",
+        "description": "Servicio técnico especializado en reparación de laptops, celulares y electrodomésticos.",
+        "url": "https://jordanroberto74.github.io/henry-tecnico/",
+        "image": "https://jordanroberto74.github.io/henry-tecnico/img/trabajo1.webp",
+        "telephone": "+591 700 00000",
+        "email": "contacto@henrytecnico.demo",
+        "priceRange": "$$",
+        "areaServed": "Bolivia",
+        "openingHours": "Mo-Sa 08:00-19:00",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Principal #123",
+          "addressLocality": "Santa Cruz de la Sierra",
+          "addressCountry": "BO"
+        }
+      }
+    </script>
   </head>
+
   <body>
-    <!-- Secciòn INICIO -->
-    <span class="sombra">
-      <section id="inicio" class="inicio">
-        <div class="contenido">
-          <header>
-            <div class="logo">
-              <i class="fa-brands fa-codepen"></i>
-              <h1>Henry</h1>
-            </div>
-            <nav id="nav" class="">
-              <a href="#inicio">Inicio</a>
-              <a href="#servicios">Servicios</a>
-              <a href="#habilidades">Habilidades</a>
-              <a href="#trabajos">Trabajos</a>
-              <a href="#contacto">Contacto</a>
-            </nav>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-            <!-- Icono del menu responsive -->
-            <div id="icono-nav" onclick="responsiveMenu()">
-              <i class="fa-solid fa-bars"></i>
-            </div>
+    <!-- ============ HEADER (barra flotante) ============ -->
+    <header class="site-header" id="site-header">
+      <div class="header__bar">
+        <a class="brand" href="#inicio" aria-label="Henry, inicio">
+          <span class="brand__mark" aria-hidden="true">H</span>
+          <span class="brand__name">
+            Henry
+            <span class="brand__tag">Servicio técnico</span>
+          </span>
+        </a>
 
-            <div class="redes">
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            </div>
-          </header>
+        <nav class="nav" id="primary-nav" aria-label="Navegación principal">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#servicios">Servicios</a></li>
+            <li><a class="nav__link" href="#por-que">Por qué elegirnos</a></li>
+            <li><a class="nav__link" href="#recursos">Recursos</a></li>
+            <li><a class="nav__link" href="#contacto">Contacto</a></li>
+            <li>
+              <a class="btn btn--outline btn--sm header__cta" href="#contacto">Agendar servicio</a>
+            </li>
+          </ul>
+        </nav>
 
-          <div class="fila">
-            <div class="col">
-              <h2>Técnico en Reparación Electrónica</h2>
-              <p>
-                Especialista en reparación de computadoras, celulares y equipos
-                electrónicos. Servicio rápido, confiable y garantizado.
-              </p>
-              <button
-                class="btn btn-1"
-                onclick="window.location.href='#contacto'"
-              >
-                Solicitar Servicio
-              </button>
-            </div>
-            <div class="col">
-              <div class="contenedor-img">
-                <img src="img/foto-inicio.png" alt="" />
-              </div>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Abrir menú de navegación"
+        >
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- ============ HERO (full-bleed) ============ -->
+      <section id="inicio" class="hero" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="hero__content">
+            <p class="hero__eyebrow">Servicio técnico especializado</p>
+            <h1 class="hero__title" id="hero-title">
+              Reparación de equipos <span>rápida y cerca de ti</span>
+            </h1>
+            <p class="hero__lead">
+              Laptops, celulares y electrodomésticos con diagnóstico gratuito,
+              repuestos originales y garantía por escrito.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--light" href="#contacto">Agendar servicio</a>
+              <a class="btn btn--outline" href="#servicios">Ver servicios</a>
             </div>
           </div>
         </div>
       </section>
-    </span>
 
-    <!-- sección SERVICIOS -->
-    <section id="servicios" class="servicios">
-      <div class="fila">
-        <div class="col">
-          <div class="card">
-            <div class="icono color1">
-              <div class="circulo">
-                <i class="fa-solid fa-laptop"></i>
-              </div>
-            </div>
-            <h3>Reparación de Laptops</h3>
-            <p>
-              Solución a fallas de hardware, formateo, limpieza interna, cambio
-              de pantallas y más.
+      <!-- ============ PROBLEMAS MÁS COMUNES ============ -->
+      <section id="problemas" class="section" aria-labelledby="problems-title">
+        <div class="container">
+          <div class="section-head section-head--center reveal">
+            <h2 class="section-title" id="problems-title">
+              Reparamos los <span class="accent">problemas más comunes</span>
+            </h2>
+            <p class="section-lead">
+              Atendemos las fallas más frecuentes de tus equipos, con diagnóstico previo
+              y presupuesto claro.
             </p>
+          </div>
 
-            <a href="#">Leer Más</a>
+          <div class="problems__grid">
+            <article class="problem reveal">
+              <span class="problem__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>
+              </span>
+              <h3 class="problem__title">Laptops</h3>
+              <p class="problem__text">Diagnosticamos y reparamos fallas de hardware y software.</p>
+              <ul class="problem__list">
+                <li>No enciende</li>
+                <li>Pantalla rota</li>
+                <li>Se sobrecalienta</li>
+                <li>Batería no dura</li>
+              </ul>
+            </article>
+
+            <article class="problem problem--featured reveal">
+              <img class="problem__img" src="img/trabajo3.webp" alt="Técnico reparando un equipo a nivel de componente" loading="lazy" />
+              <div class="problem__card">
+                <span class="problem__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+                </span>
+                <h3 class="problem__title">Celulares</h3>
+                <p class="problem__text">Cambiamos pantallas y baterías con repuestos de calidad.</p>
+                <ul class="problem__list">
+                  <li>Pantalla dañada</li>
+                  <li>Batería agotada</li>
+                  <li>No carga</li>
+                  <li>Fallas de software</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="problem reveal">
+              <span class="problem__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16"/><circle cx="8" cy="16" r="1"/></svg>
+              </span>
+              <h3 class="problem__title">Electrodomésticos</h3>
+              <p class="problem__text">Revisión y reparación de los electrodomésticos de tu hogar.</p>
+              <ul class="problem__list">
+                <li>No enciende</li>
+                <li>Hace ruido</li>
+                <li>No calienta</li>
+                <li>Fugas de agua</li>
+              </ul>
+            </article>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <div class="icono color2">
-              <div class="circulo">
-                <i class="fa-solid fa-mobile"></i>
-              </div>
-            </div>
-            <h3>Servicio Técnico Celulares</h3>
-            <p>
-              Reparación de pantallas, cambio de batería, problemas de carga y
-              software.
-            </p>
+      </section>
 
-            <a href="#">Leer Más</a>
+      <!-- ============ REPARAMOS TODOS LOS EQUIPOS ============ -->
+      <section id="servicios" class="section section--light" aria-labelledby="equipment-title">
+        <div class="container">
+          <div class="section-head section-head--center reveal">
+            <h2 class="section-title" id="equipment-title">
+              Reparamos <span class="accent">todos los equipos</span>
+            </h2>
+            <p class="section-lead">
+              Diagnóstico previo, presupuesto claro y garantía por escrito en cada reparación.
+            </p>
+          </div>
+
+          <div class="equipment__grid">
+            <article class="equip-card reveal">
+              <div class="equip-card__media">
+                <img src="img/foto-contacto.webp" alt="Reparación de laptops" loading="lazy" />
+              </div>
+              <div class="equip-card__body">
+                <h3 class="equip-card__title">Reparación de laptops</h3>
+                <p class="equip-card__text">Pantallas, teclados, baterías, formateo y limpieza interna.</p>
+              </div>
+            </article>
+
+            <article class="equip-card reveal">
+              <div class="equip-card__media">
+                <img src="img/trabajo3.webp" alt="Reparación de PC y equipos de escritorio" loading="lazy" />
+              </div>
+              <div class="equip-card__body">
+                <h3 class="equip-card__title">PC y equipos de escritorio</h3>
+                <p class="equip-card__text">Reparación a nivel de componente, fuentes y refrigeración.</p>
+              </div>
+            </article>
+
+            <article class="equip-card reveal">
+              <div class="equip-card__media">
+                <img src="img/trabajo2.webp" alt="Soporte técnico en sitio" loading="lazy" />
+              </div>
+              <div class="equip-card__body">
+                <h3 class="equip-card__title">Soporte en sitio</h3>
+                <p class="equip-card__text">Vamos a tu casa u oficina cuando lo necesites.</p>
+              </div>
+            </article>
+
+            <article class="equip-card reveal">
+              <div class="equip-card__media">
+                <img src="img/trabajo1.webp" alt="Redes y servidores" loading="lazy" />
+              </div>
+              <div class="equip-card__body">
+                <h3 class="equip-card__title">Redes y Wi-Fi</h3>
+                <p class="equip-card__text">Instalación y optimización de redes domésticas o de oficina.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="equipment__foot">
+            <a class="btn btn--primary" href="#contacto">Ver todos los servicios</a>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <div class="icono color3">
-              <div class="circulo">
-                <i class="fa-solid fa-cog"></i>
-              </div>
-            </div>
-            <h3>Electrodomésticos</h3>
-            <p>
-              Diagnóstico y reparación de microondas, televisores, licuadoras,
-              entre otros.
-            </p>
+      </section>
 
-            <a href="#">Leer Más</a>
+      <!-- ============ BANDA CTA (tarjeta) ============ -->
+      <section class="cta-band" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="cta-band__card reveal">
+            <h2 class="cta-band__title" id="cta-title">Agenda tu diagnóstico gratis</h2>
+            <p class="cta-band__lead">Déjanos tu número y te llamamos en menos de 2 horas.</p>
+            <form class="cta-band__form" id="cta-form">
+              <input class="cta-band__input" id="cta-phone" type="tel" placeholder="Tu número de teléfono" aria-label="Tu número de teléfono" required />
+              <button class="btn btn--light" type="submit">Agendar</button>
+            </form>
+            <p class="cta-band__note" id="cta-note" role="status" aria-live="polite"></p>
           </div>
         </div>
+      </section>
+
+      <!-- ============ POR QUÉ ELEGIRNOS ============ -->
+      <section id="por-que" class="section" aria-labelledby="why-title">
+        <div class="container">
+          <div class="why">
+            <div class="why__content reveal">
+              <div class="section-head">
+                <h2 class="section-title" id="why-title">
+                  Por qué elegir <span class="accent">Henry</span>
+                </h2>
+                <p class="section-lead">
+                  Diagnóstico gratuito, presupuesto claro y garantía por escrito en cada reparación.
+                </p>
+              </div>
+
+              <div class="why__list">
+                <div class="why__row why__row--open">
+                  <span class="why__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                  </span>
+                  <div class="why__body">
+                    <h3 class="why__title">Diagnóstico gratis</h3>
+                    <p class="why__text">Evaluamos tu equipo sin costo y sin compromiso.</p>
+                  </div>
+                  <span class="why__arrow" aria-hidden="true">→</span>
+                </div>
+
+                <div class="why__row">
+                  <span class="why__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+                  </span>
+                  <div class="why__body">
+                    <h3 class="why__title">Precios transparentes</h3>
+                  </div>
+                  <span class="why__arrow" aria-hidden="true">→</span>
+                </div>
+
+                <div class="why__row">
+                  <span class="why__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                  </span>
+                  <div class="why__body">
+                    <h3 class="why__title">Calidad garantizada</h3>
+                  </div>
+                  <span class="why__arrow" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="why__media reveal">
+              <img src="img/trabajo1.webp" alt="Técnico de Henry" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ RECURSOS (con overlay) ============ -->
+      <section id="recursos" class="section section--light" aria-labelledby="resources-title">
+        <div class="container">
+          <div class="resources__head reveal">
+            <div>
+              <h2 class="section-title" id="resources-title">
+                Ayuda rápida y <span class="accent">recursos útiles</span>
+              </h2>
+            </div>
+            <p class="section-lead">
+              Guías rápidas para cuidar tus equipos y extender su vida útil.
+            </p>
+          </div>
+
+          <div class="resources__grid">
+            <article class="resource reveal">
+              <div class="resource__media">
+                <img src="img/trabajo2.webp" alt="Mantenimiento de laptop" loading="lazy" />
+                <div class="resource__body">
+                  <h3 class="resource__title">Cómo mantener tu laptop</h3>
+                  <p class="resource__text">Limpieza, ventilación y hábitos que evitan el sobrecalentamiento.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="resource reveal">
+              <div class="resource__media">
+                <img src="img/trabajo3.webp" alt="Cambio de batería" loading="lazy" />
+                <div class="resource__body">
+                  <h3 class="resource__title">Cuándo cambiar la batería</h3>
+                  <p class="resource__text">Señales de desgaste y cómo saber si necesitas reemplazarla.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="resource reveal">
+              <div class="resource__media">
+                <img src="img/foto-contacto.webp" alt="Señales de sobrecalentamiento" loading="lazy" />
+                <div class="resource__body">
+                  <h3 class="resource__title">Señales de sobrecalentamiento</h3>
+                  <p class="resource__text">Cuándo preocuparte y cómo actuar antes de que sea tarde.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="resources__foot">
+            <a class="btn btn--dark" href="#contacto">Ver todos los recursos</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ (2 columnas, tarjetas) ============ -->
+      <section id="faq" class="section" aria-labelledby="faq-title">
+        <div class="container faq__grid">
+          <div class="faq__list reveal">
+            <details class="faq__item" open>
+              <summary class="faq__q">¿El diagnóstico tiene costo?</summary>
+              <div class="faq__a">
+                No. El diagnóstico es gratuito y sin compromiso. Solo pagas si decides
+                reparar el equipo.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">¿Cuánto tarda una reparación?</summary>
+              <div class="faq__a">
+                Depende de la falla y de la disponibilidad de repuestos. La mayoría de
+                reparaciones se entregan entre 24 y 72 horas.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">¿Qué garantía ofrecen?</summary>
+              <div class="faq__a">
+                Todas las reparaciones incluyen 30 días de garantía por escrito sobre la
+                mano de obra y los repuestos instalados.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">¿Trabajan a domicilio?</summary>
+              <div class="faq__a">
+                Sí. Ofrecemos servicio a domicilio y en oficinas, con cita previa según
+                disponibilidad.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">¿Qué pasa si no se puede reparar?</summary>
+              <div class="faq__a">
+                Te lo informamos con transparencia y no cobramos el diagnóstico. Si el
+                equipo no tiene arreglo, te orientamos sobre la mejor alternativa.
+              </div>
+            </details>
+          </div>
+
+          <aside class="faq__aside reveal">
+            <h2 class="section-title" id="faq-title">
+              Preguntas <span class="accent">respondidas</span>
+            </h2>
+            <p class="section-lead">
+              ¿No encuentras tu respuesta? Hablemos y te ayudamos con tu caso.
+            </p>
+            <a class="btn btn--primary btn--sm faq__all" href="#contacto">Ver todas las FAQ</a>
+
+            <div class="faq__cta">
+              <div class="faq__cta-head">
+                <span class="faq__cta-avatar" aria-hidden="true">H</span>
+                <div>
+                  <p class="faq__cta-title">¿Tienes más preguntas?</p>
+                  <p class="faq__cta-text">Agenda una llamada gratuita.</p>
+                </div>
+              </div>
+              <a class="btn btn--dark btn--sm" href="#contacto">Hablemos</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ============ BANDA FAMILIA + CONTACTO ============ -->
+      <section id="contacto" class="section section--light" aria-labelledby="family-title">
+        <div class="container">
+          <div class="family reveal">
+            <div class="family__intro">
+              <h2 class="section-title" id="family-title">
+                Henry, <span class="accent">parte de tu día a día</span>
+              </h2>
+              <p class="family__text">
+                Reparamos lo que más usas para que sigas con tu rutina. Cuéntanos qué le
+                pasa a tu equipo y te respondemos en menos de 24 horas.
+              </p>
+              <div class="family__logos">
+                <span class="family__logo">Henry</span>
+                <span class="family__logo family__logo--muted">servicio técnico</span>
+              </div>
+            </div>
+
+            <form class="family__form contact__form" id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="field">
+                  <label class="field__label" for="nombre">Nombre completo</label>
+                  <input class="field__input" id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required />
+                  <span class="field__error" data-error-for="nombre" aria-live="polite"></span>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="email">Correo electrónico</label>
+                  <input class="field__input" id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required />
+                  <span class="field__error" data-error-for="email" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label class="field__label" for="telefono">Teléfono (opcional)</label>
+                  <input class="field__input" id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="+591 700 00000" />
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="tipo">Tipo de servicio</label>
+                  <select class="field__input" id="tipo" name="tipo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="laptop">Reparación de laptop</option>
+                    <option value="celular">Celular</option>
+                    <option value="electrodomestico">Electrodoméstico</option>
+                    <option value="antivirus">Antivirus</option>
+                    <option value="remoto">Soporte remoto</option>
+                    <option value="redes">Redes y Wi-Fi</option>
+                  </select>
+                  <span class="field__error" data-error-for="tipo" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="mensaje">Mensaje</label>
+                <textarea class="field__input" id="mensaje" name="mensaje" rows="4" placeholder="Describe la falla de tu equipo..." required></textarea>
+                <span class="field__error" data-error-for="mensaje" aria-live="polite"></span>
+              </div>
+
+              <div>
+                <button class="btn btn--primary" type="submit">Solicitar diagnóstico</button>
+              </div>
+
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="brand" href="#inicio" aria-label="Henry, inicio">
+              <span class="brand__mark" aria-hidden="true">H</span>
+              <span class="brand__name">
+                Henry
+                <span class="brand__tag">Servicio técnico</span>
+              </span>
+            </a>
+            <p>
+              Reparación de laptops, celulares y electrodomésticos con diagnóstico
+              gratuito y garantía por escrito.
+            </p>
+            <div class="social" aria-label="Contacto directo">
+              <a href="https://wa.me/59170000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M8 11h8M8 14h5"/></svg>
+              </a>
+              <a href="mailto:contacto@henrytecnico.demo" aria-label="Correo electrónico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <p class="footer__col-title">Compañía</p>
+            <nav class="footer__nav" aria-label="Compañía">
+              <a href="#inicio">Por qué Henry</a>
+              <a href="#por-que">Por qué elegirnos</a>
+              <a href="#contacto">Sobre nosotros</a>
+              <a href="#contacto">Contacto</a>
+            </nav>
+          </div>
+
+          <div>
+            <p class="footer__col-title">Servicios</p>
+            <nav class="footer__nav" aria-label="Servicios">
+              <a href="#servicios">Reparación de laptops</a>
+              <a href="#servicios">PC y escritorio</a>
+              <a href="#servicios">Soporte en sitio</a>
+              <a href="#servicios">Redes y Wi-Fi</a>
+            </nav>
+          </div>
+
+          <div>
+            <p class="footer__col-title">Recursos</p>
+            <nav class="footer__nav" aria-label="Recursos">
+              <a href="#faq">Preguntas frecuentes</a>
+              <a href="#recursos">Consejos</a>
+              <a href="#contacto">Contacto</a>
+              <a href="#inicio">Inicio</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="footer__legal">
+          <span>© 2026 Henry. Todos los derechos reservados.</span>
+          <span>Sitio demostrativo · Contenido ficticio</span>
+        </div>
+
+        <div class="footer__watermark" aria-hidden="true">HENRY</div>
       </div>
-      <div class="fila">
-        <div class="col">
-          <div class="card">
-            <div class="icono color1">
-              <div class="circulo">
-                <i class="fa-solid fa-shield"></i>
-              </div>
-            </div>
-            <h3>Instalación de Antivirus</h3>
-            <p>
-              Protección completa para tu equipo con software actualizado y
-              configuraciones personalizadas.
-            </p>
-
-            <a href="#">Leer Más</a>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="icono color2">
-              <div class="circulo">
-                <i class="fa-solid fa-circle-info"></i>
-              </div>
-            </div>
-            <h3>Soporte Técnico Remoto</h3>
-            <p>
-              Asistencia a distancia para problemas de software, conexión y
-              configuración de programas.
-            </p>
-
-            <a href="#">Leer Más</a>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="icono color3">
-              <div class="circulo">
-                <i class="fa-solid fa-globe"></i>
-              </div>
-            </div>
-            <h3>Redes y Configuración</h3>
-            <p>
-              Instalación y optimización de redes domésticas o de oficina,
-              configuración de routers y más.
-            </p>
-
-            <a href="#">Leer Más</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- sección habilidades -->
-    <section class="habilidades" id="habilidades">
-      <div class="contenedor-habi">
-        <h2>Habilidades</h2>
-        <div class="fila">
-          <div class="col">
-            <div class="score">
-              <div class="box">
-                <div class="chart" data-percent="95">95%</div>
-                <h2>Reparación de Hardware</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="score">
-              <div class="box">
-                <div class="chart" data-percent="90">90%</div>
-                <h2>Diagnóstico de Fallas</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="score">
-              <div class="box">
-                <div class="chart" data-percent="85">85%</div>
-                <h2>Software y Sistemas</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="fila">
-          <div class="col">
-            <div class="score">
-              <div class="box">
-                <div class="chart" data-percent="70">70%</div>
-                <h2>Redes e Internet</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="score">
-              <div class="box">
-                <div class="chart" data-percent="90">90%</div>
-                <h2>Mantenimiento Preventivo</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="score">
-              <div class="box">
-                <div class="chart" data-percent="90">90%</div>
-                <h2>Atención al Cliente</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- sección trabajos -->
-    <section class="trabajos" id="trabajos">
-      <h2>Mis Trabajos</h2>
-
-      <nav />
-
-      <div class="galeria">
-        <div class="item disenio">
-          <img src="img/trabajo1.png" alt="" />
-          <div class="info">
-            <h3>Instalación de Redes</h3>
-            <span>cableado</span><span>configuración</span><span>router</span>
-            <a href="#">Ver Trabajo</a>
-          </div>
-        </div>
-        <div class="item programacion">
-          <img src="img/trabajo2.jpg" alt="" />
-          <div class="info">
-            <h3>Configuración de Equipos</h3>
-            <span>Windows</span><span>Drivers</span><span>Software</span>
-            <a href="#">Ver Trabajo</a>
-          </div>
-        </div>
-        <div class="item animaciones">
-          <img src="img/trabajo3.png" alt="" />
-          <div class="info">
-            <h3>Mantenimiento Preventivo</h3>
-            <span>limpieza</span><span>optimización</span
-            ><span>rendimiento</span>
-            <a href="#">Ver Trabajo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- sección contacto -->
-    <section class="contacto" id="contacto">
-      <div class="contenedor-contacto">
-        <h2>Contacto</h2>
-        <div class="fila">
-          <div class="col">
-            <div class="info">
-              <h3>Email:</h3>
-              <p>micorreo@gmail</p>
-            </div>
-            <div class="info">
-              <h3>Teléfono:</h3>
-              <p>+591 00000000</p>
-            </div>
-            <div class="info">
-              <h3>País</h3>
-              <p>Bolivia</p>
-            </div>
-            <div class="info">
-              <h3>Ciudad:</h3>
-              <p>Santa Cruz</p>
-            </div>
-          </div>
-          <div class="col">
-            <input type="text" placeholder="Nombre..." />
-            <input type="text" placeholder="Correo..." />
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="Mensaje"
-            ></textarea>
-            <input type="submit" value="Enviar" class="btn" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p>© 2023 Henry. Todos los derechos reservados.</p>
     </footer>
-    <script src="app.js"></script>
+
+    <script src="main.js" defer></script>
   </body>
 </html>
