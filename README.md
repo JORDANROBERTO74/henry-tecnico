@@ -1,38 +1,25 @@
-# Henry — Servicio Técnico Especializado
+# Henry — Electronics Repair Landing Page
 
-Landing page for a (fictional) electronics repair technician. A frontend showcase built with **vanilla HTML, CSS and JavaScript** — no frameworks, no build step.
+A service-business landing page for an electronics repair technician: services, common problems, why-us, resources, FAQ and contact. Hand-written HTML, CSS and JavaScript, with no framework or build step.
 
-## Highlights
+![Henry home page with a dark data-center photograph, the headline "Reparación de equipos rápida y cerca de ti" and a blue accent](docs/screenshot.webp)
 
-- **Layout cloned from a reference design** (service-business landing): floating pill header, full-bleed hero, common-problems grid with an overlapping featured card, 2×2 service cards, inset CTA band, why-us with progressive rows and photo, image-overlay resources, two-column FAQ with CTA card, family/contact band and a dark footer with watermark.
-- **Design system**: navy + blue, Inter (700/800 headings), fluid type with `clamp()`, soft cards and rounded buttons.
-- **Responsive**: from 320px to 1440px, mobile-first, no overflow.
-- **Accessible (WCAG 2.1 AA)**: skip link, semantic landmarks, visible focus, labeled fields, `prefers-reduced-motion`.
-- **Working CTA band**: a phone input that prefills the contact form and scrolls to it.
-- **SEO**: meta description, Open Graph/Twitter cards, JSON-LD `ProfessionalService`, favicon.
-- **Performance**: WebP images, no jQuery/icon fonts (inline SVG), deferred lightweight JS.
+## What it is
 
-## Stack
+A one-page site for a fictional repair technician: floating pill header, full-bleed hero, a common-problems grid with an overlapping featured card, 2×2 service cards, an inset CTA band, progressive why-us rows, resource cards, a two-column FAQ and a contact band.
 
-- HTML5
-- CSS3 (custom properties, Grid, `clamp()`)
-- Vanilla JS (`IntersectionObserver`, accessible nav, form validation)
+It is a front-end showcase, not a booking product. The brand, testimonials, statistics and contact details are illustrative; the form validates in the browser and shows a success state.
 
-## Structure
+## Why this build
 
-```
-index.html
-styles.css
-main.js
-favicon.svg
-img/
-  foto-contacto.webp
-  trabajo1.webp
-  trabajo2.webp
-  trabajo3.webp
-```
+- **Layout rebuilt from a reference design.** The section rhythm and composition follow a service-business reference; the brand, copy, palette and implementation are original.
+- **Design system.** Navy and blue, Inter 700/800 for headings, fluid `clamp()` type, soft cards and rounded buttons.
+- **Accessible (WCAG 2.1 AA).** Skip link, semantic landmarks, visible focus, labeled fields and `prefers-reduced-motion`.
+- **Working CTA band.** A phone input prefills the contact form and scrolls to it — small, but it closes the gap between interest and action.
+- **Performance.** WebP images, inline SVG icons, no jQuery or icon fonts, deferred JavaScript.
+- **SEO.** Meta description, Open Graph/Twitter cards and `ProfessionalService` JSON-LD.
 
-## Run locally
+## Quick start
 
 Open `index.html` directly, or serve the folder:
 
@@ -40,18 +27,22 @@ Open `index.html` directly, or serve the folder:
 python -m http.server 8080
 ```
 
-Then visit <http://localhost:8080>.
+Visit <http://localhost:8080>.
 
-## Live preview
+## Project structure
 
-<https://jordanroberto74.github.io/henry-tecnico/>
+```text
+index.html              # The whole page
+styles.css              # Design tokens, layout and components
+main.js                 # Accessible nav, reveal, CTA handoff, form validation
+img/                    # Optimized WebP images
+docs/screenshot.webp    # README screenshot
+```
 
-## Notes
+## Status and scope
 
-- **Demo / fictional content**: brand, testimonials, stats and contact details are illustrative. The UI layout is inspired by a reference design; the brand and copy are Henry's own.
-- The contact form is **front-end only**: it validates fields and shows a success state; no backend.
-- The CTA band phone input is a demo: it copies the number into the contact form and scrolls there.
+Live at <https://jordanroberto74.github.io/henry-tecnico/>. Brand, testimonials, statistics and contact details are demonstration content. The contact form is front-end only: it validates and shows a success state, but sends nothing.
 
-## Contact
+## License
 
-[jordanroberto74@gmail.com](mailto:jordanroberto74@gmail.com)
+MIT. See [LICENSE](LICENSE).
